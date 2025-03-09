@@ -12,13 +12,13 @@ This project implements a Retrieval-Augmented Generation (RAG) chatbot using IBM
 
 ## Files in the Project
 
-1. **QA_Bot_Project.py**  
+1. **QA_bot_Project.py**  
    This is the main script for running the QA bot. It initializes the LLM (Language Model), document loaders, text splitters, embedding models, and the retriever. It also sets up a Gradio interface for user interaction.
 
-2. **QA_Bot_test.py**  
+2. **QA_bot_test.py**  
    A testing script that demonstrates loading PDF files, splitting the content into chunks, embedding these chunks, and creating a vector database for efficient retrieval.
 
-3. **pdfloader.py**  
+3. **PDF_Loader.py**  
    This script loads PDF documents and prints the first 1000 characters of the text to verify correct extraction. It is used as part of the document processing pipeline.
 
 4. **text_splitter.py**  
