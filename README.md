@@ -21,13 +21,20 @@ This project implements a Retrieval-Augmented Generation (RAG) chatbot using IBM
 3. **PDF_Loader.py**  
    This script loads PDF documents and prints the first 1000 characters of the text to verify correct extraction. It is used as part of the document processing pipeline.
 
-4. **text_splitter.py**  
+4. **Text_Splitter.py**  
    This file contains the logic for splitting large documents into smaller, manageable chunks using `RecursiveCharacterTextSplitter`.
-
+   
 5. **Vector_Store.py**  
    This script defines how text embeddings are generated using Watsonx and how to create and configure a vector database (using Chroma) to store the embedded document chunks.
+   
+6. **Embedding_Model.py**  
+   This script creates and configures a **vector database** using **HuggingFace Embeddings** and the Chroma vector store. It reads a document (`new-Policies.txt`), embeds its content, stores it in a vector database, and allows similarity search queries.
+   - Loads the document text and converts it into vector embeddings.
+   - Stores the embeddings using Chroma for retrieval.
+   - Performs a **similarity search** based on user queries (example: "Smoking policy").
+   - Retrieves and prints the top 5 most relevant document chunks.
 
-6. **Retriever.py**  
+7. **Retriever.py**  
    Defines how a retriever is created using the Chroma vector store, to perform similarity searches and retrieve relevant document segments for answering user queries.
 
 ## Set up IBM Watsonx Credentials
